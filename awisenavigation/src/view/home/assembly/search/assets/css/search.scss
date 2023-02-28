@@ -1,0 +1,151 @@
+@mixin tr($duration:0.3s) {
+
+    transition-property:all;
+    transition-duration:$duration;
+
+    /* Firefox 4 */
+    /* -moz-transition-delay: 0.2ms; */
+    -moz-transition-property:all; 
+    -moz-transition-duration:$duration;
+
+
+    /* Safari and Chrome */
+    /* -webkit-transition-delay: 0.2ms; */
+    -webkit-transition-property:all; 
+    -webkit-transition-duration:$duration;
+
+
+    /* Opera */
+    /* -o-transition-delay: 0.2ms; */
+    -o-transition-property:all;
+    -o-transition-duration:$duration;
+}
+$search_color: #d6d6d6;
+// 搜索框样式
+.search{
+    @include tr;
+    $width:300px;
+    width: $width;
+    height: 32px;
+    color: #999999;
+    border-radius: 30px;
+    border-width: 0px;
+    border-style: none;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    outline: none;
+    position: fixed;
+    top:30%;
+    left: calc(50% - $width/2);
+    &:hover{
+        color: $search_color;
+        background: rgba(0,0,0,0.6);
+        border-radius: 12px;
+    }
+    &:focus{
+        width: $width + 80px;
+        color: #ffffff;
+        background: rgba(0,0,0,0.6);
+        border-radius: 12px;
+        left: calc(50% - ($width + 80px)/2);
+    }
+}
+// 搜索框便捷提示栏
+.search_tips{
+    @include tr();
+    $width:300px;
+    $height:32px;
+    width: $width + 80px;
+    color: #999999;
+    border-radius: 12px;
+    border-width: 0px;
+    border-style: none;
+    background: rgba(0,0,0,0.4);
+    text-align: center;
+    outline: none;
+    position: fixed;
+    top:calc(30% + $height + 3px);
+    left: calc(50% - ($width + 80px)/2);
+    overflow: hidden;
+    .search_tip{
+        $width:300px;
+        $height:32px;
+        width: $width + 80px;
+        height: $height;
+        cursor: pointer;
+        &:hover{
+            color: $search_color;
+            border-radius: 12px;
+            background: rgba(0,0,0,0.6);
+        }
+    }
+}
+// 搜索引擎选择栏样式
+.search_web_set_choice{
+    position: fixed;
+    margin-top: 52px;
+    margin-left: 42px;
+    .search_web_set_choice_box{
+        @include tr;
+        height: 0px;
+        border-radius: 12px;
+        background-color: rgba(180, 180, 180,0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center;
+        overflow: hidden;
+
+        .search_choice_ico{   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* white-space: nowrap; */
+            background-color: rgba(94, 94, 94,0.6);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+            overflow: hidden;   
+
+            cursor: pointer;
+        }
+    }
+    .search_web_set_choice_button{
+        @include tr;
+        background-color: rgba(0, 0, 0,0.4);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 3px;
+    
+        cursor: pointer;
+
+        &:hover{
+            background-color: rgba(180, 180, 180,0.7);
+        }
+    }
+}
+// 搜索背景
+.search_bg{
+    @include tr(0.2s);
+    position: fixed;
+    display: block;
+    z-index: 0;
+    width:100%;
+    height:100%;
+}
+.search_bg_play{
+    backdrop-filter:saturate(180%) blur(8px);
+    background:rgba(200,200,200,0.3);
+    transform:scale(1.2,1.2);
+}
+// 搜索提示框
+.search_tips{
+    color: $search_color;
+    border-radius: 12px;
+}

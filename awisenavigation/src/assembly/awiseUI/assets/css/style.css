@@ -1,0 +1,57 @@
+.aw_border {
+  border-color: rgb(245, 245, 245);
+  border-width: 1px;
+  border-style: solid;
+  padding: 4px 12px 4px 12px;
+}
+
+.input_box {
+  width: auto;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.input_dom {
+  display: flex;
+  align-items: center;
+  float: right;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.pw {
+  list-style-type: square;
+}
+
+.label {
+  width: auto;
+  height: 100%;
+  float: left;
+  -moz-text-align-last: justify;
+       text-align-last: justify;
+  text-align: justify;
+  line-height: 40px;
+}
+
+.tips {
+  height: 24px;
+  text-align: center;
+}
+
+.msg_box {
+  position: absolute;
+  z-index: 200;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-color: rgb(0, 0, 0);
+  transition-duration: 0.2s;
+}
+.msg_box .msg div {
+  display: inline-block;
+}/*# sourceMappingURL=style.css.map */

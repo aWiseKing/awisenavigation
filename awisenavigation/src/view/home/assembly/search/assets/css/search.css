@@ -1,0 +1,183 @@
+.search {
+  transition-property: all;
+  transition-duration: 0.3s;
+  /* Firefox 4 */
+  /* -moz-transition-delay: 0.2ms; */
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.3s;
+  /* Safari and Chrome */
+  /* -webkit-transition-delay: 0.2ms; */
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  /* Opera */
+  /* -o-transition-delay: 0.2ms; */
+  -o-transition-property: all;
+  -o-transition-duration: 0.3s;
+  width: 300px;
+  height: 32px;
+  color: #999999;
+  border-radius: 30px;
+  border-width: 0px;
+  border-style: none;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  outline: none;
+  position: fixed;
+  top: 30%;
+  left: calc(50% - 150px);
+}
+.search:hover {
+  color: #d6d6d6;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+}
+.search:focus {
+  width: 380px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  left: calc(50% - 190px);
+}
+
+.search_tips {
+  transition-property: all;
+  transition-duration: 0.3s;
+  /* Firefox 4 */
+  /* -moz-transition-delay: 0.2ms; */
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.3s;
+  /* Safari and Chrome */
+  /* -webkit-transition-delay: 0.2ms; */
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  /* Opera */
+  /* -o-transition-delay: 0.2ms; */
+  -o-transition-property: all;
+  -o-transition-duration: 0.3s;
+  width: 380px;
+  color: #999999;
+  border-radius: 12px;
+  border-width: 0px;
+  border-style: none;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  outline: none;
+  position: fixed;
+  top: calc(30% + 32px + 3px);
+  left: calc(50% - 190px);
+  overflow: hidden;
+}
+.search_tips .search_tip {
+  width: 380px;
+  height: 32px;
+  cursor: pointer;
+}
+.search_tips .search_tip:hover {
+  color: #d6d6d6;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.search_web_set_choice {
+  position: fixed;
+  margin-top: 52px;
+  margin-left: 42px;
+}
+.search_web_set_choice .search_web_set_choice_box {
+  transition-property: all;
+  transition-duration: 0.3s;
+  /* Firefox 4 */
+  /* -moz-transition-delay: 0.2ms; */
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.3s;
+  /* Safari and Chrome */
+  /* -webkit-transition-delay: 0.2ms; */
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  /* Opera */
+  /* -o-transition-delay: 0.2ms; */
+  -o-transition-property: all;
+  -o-transition-duration: 0.3s;
+  height: 0px;
+  border-radius: 12px;
+  background-color: rgba(180, 180, 180, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.search_web_set_choice .search_web_set_choice_box .search_choice_ico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* white-space: nowrap; */
+  background-color: rgba(94, 94, 94, 0.6);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.search_web_set_choice .search_web_set_choice_button {
+  transition-property: all;
+  transition-duration: 0.3s;
+  /* Firefox 4 */
+  /* -moz-transition-delay: 0.2ms; */
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.3s;
+  /* Safari and Chrome */
+  /* -webkit-transition-delay: 0.2ms; */
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  /* Opera */
+  /* -o-transition-delay: 0.2ms; */
+  -o-transition-property: all;
+  -o-transition-duration: 0.3s;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3px;
+  cursor: pointer;
+}
+.search_web_set_choice .search_web_set_choice_button:hover {
+  background-color: rgba(180, 180, 180, 0.7);
+}
+
+.search_bg {
+  transition-property: all;
+  transition-duration: 0.2s;
+  /* Firefox 4 */
+  /* -moz-transition-delay: 0.2ms; */
+  -moz-transition-property: all;
+  -moz-transition-duration: 0.2s;
+  /* Safari and Chrome */
+  /* -webkit-transition-delay: 0.2ms; */
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  /* Opera */
+  /* -o-transition-delay: 0.2ms; */
+  -o-transition-property: all;
+  -o-transition-duration: 0.2s;
+  position: fixed;
+  display: block;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.search_bg_play {
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+          backdrop-filter: saturate(180%) blur(8px);
+  background: rgba(200, 200, 200, 0.3);
+  transform: scale(1.2, 1.2);
+}
+
+.search_tips {
+  color: #d6d6d6;
+  border-radius: 12px;
+}/*# sourceMappingURL=search.css.map */
