@@ -1,7 +1,7 @@
 {
   "name": "awisenavigation",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "node server",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "cross-env": "^7.0.3",
     "vite": "^4.0.4",
+    
     "vite-plugin-solid": "^2.5.0"
   }
 }

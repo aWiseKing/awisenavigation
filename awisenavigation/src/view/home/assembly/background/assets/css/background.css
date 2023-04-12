@@ -9,39 +9,24 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-  transition-property: all;
-  transition-duration: 0.2s;
-  /* transition-delay:2s; */
-  /* Firefox 4 */
-  /* -moz-transition-delay: 0.2ms; */
-  -moz-transition-property: all;
-  -moz-transition-duration: 0.2s;
-  /* Safari and Chrome */
-  /* -webkit-transition-delay: 0.2ms; */
-  -webkit-transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  /* Opera */
-  /* -o-transition-delay: 0.2ms; */
-  -o-transition-property: all;
-  -o-transition-duration: 0.2s;
 }
 
 /* 动画代码 */
 @keyframes bg_ani {
   0% {
-    background: url(../img/bg/1.jpg);
+    background: url(../img/bg/1.webp), url(../img/bg/1.jpg);
     background-size: cover;
   }
   33% {
-    background: url(../img/bg/2.jpg);
+    background: url(../img/bg/2.webp), url(../img/bg/2.jpg);
     background-size: cover;
   }
   66% {
-    background: url(../img/bg/3.jpg);
+    background: url(../img/bg/3.webp), url(../img/bg/3.jpg);
     background-size: cover;
   }
   100% {
-    background: url(../img/bg/4.jpg);
+    background: url(../img/bg/4.webp), url(../img/bg/4.jpg);
     background-size: cover;
   }
 }/*# sourceMappingURL=background.css.map */

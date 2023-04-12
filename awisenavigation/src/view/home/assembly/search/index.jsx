@@ -1,6 +1,5 @@
-import { createSignal,createEffect,onMount,For, Show } from "solid-js"
+import { createSignal,createEffect,onMount,For, Show,lazy } from "solid-js"
 import { store,setStore } from "/src/store/store"
-import { render } from "solid-js/web"
 import { config } from "/src/assets/config.js"
 import { sendGetSearch } from "/src/api/api.js"
 import "./assets/css/search.css"
@@ -67,7 +66,7 @@ export function SearchMode(){
                     <img src = {searchMode()["icon"]}/>
             </div>
             
-            <div style={`height:${searchModeMenu()==1?130:0}px;padding:${searchModeMenu()==1?"3px 3px 3px 3px":"0px 0px 0px 0px"}`} class="search_web_set_choice_box">
+            <div style={`height:${searchModeMenu()==1?search_config_web.length*45:0}px;padding:${searchModeMenu()==1?"3px 3px 3px 3px":"0px 0px 0px 0px"}`} class="search_web_set_choice_box">
                 <For each={search_config_web} fallback={<div></div>}>
                     {(item,index)=>{
                             let search_choice_ico
@@ -85,7 +84,9 @@ export function SearchMode(){
                             
                             return (<div class="search_choice_ico" name="baidu_search" id="baidu_search" ref = {search_choice_ico}
                                 onFocus={()=>setSearchModeA()} tabindex="0">
-                                    <img src = {item["icon"]}/>
+                                    <Show when={searchModeMenu()==1}>
+                                        <img src = {item["icon"]}/>
+                                    </Show>
                             </div>
                             )
                         }

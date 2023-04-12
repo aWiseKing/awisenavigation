@@ -3,6 +3,7 @@ import "./assets/css/fastlist.css"
 import { config } from "/src/assets/config.js"
 
 let fastlist_config = config["fastlist"]
+
 const [fastLogo,setFastLogo] = createSignal(0)
 const [fastListConfig,setFastListConfig] = createSignal(0)
 // 跳轉頁面

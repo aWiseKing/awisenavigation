@@ -2,6 +2,13 @@ export const config = {
     "search": {
         "web": [
             {
+                "name":"bing",
+                "method":"get",
+                "url":"https://cn.bing.com/search",
+                "keys":["q"],
+                "icon":"/src/assets/img/icon/bing.png"
+            },
+            {
                 "name": "baidu",
                 "method": "get",
                 "url": "https://www.baidu.com/baidu",
@@ -34,7 +41,7 @@ export const config = {
         ["http://www.bilibili.com/", "/src/assets/img/bz.png", "bilibili"],
         ["https://www.shaoniandream.com/", "/src/assets/img/snm.png", "少年梦"],
         ["https://rpg.blue/forum.php", "/src/assets/img/project1.jpg", "project1"],
-        ["https://yidaimingjvn.xyz", "/src/assets/img/tx.jpeg", "一代明君的小屋"],
+        ["https://yidaimingjvn.xyz", "/src/assets/img/tx.jpg", "一代明君的小屋"],
         ["https://www.isekai.cn", "/src/assets/img/ysjbk.png", "异世界百科"],
         ["https://www.8kana.com/", "/src/assets/img/8z.jpg", "不可能的世界"]
     ]
