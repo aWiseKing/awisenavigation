@@ -36,7 +36,7 @@ if (!isProduction) {
 }
 
 // Serve HTML
-app.use('*', async (req, res) => {
+app.use('*',async (req, res) => {
   try {
     const url = req.originalUrl.replace(base, '')
 
@@ -66,6 +66,7 @@ app.use('*', async (req, res) => {
     res.status(500).end(e.stack)
   }
 })
+
 
 // Start http server
 app.listen(port, () => {

@@ -1,7 +1,7 @@
-import { createSignal,createEffect,onMount,For, Show,lazy } from "solid-js"
+import { createSignal,createEffect,onMount,For, Show } from "solid-js"
 import { store,setStore } from "/src/store/store"
 import { config } from "/src/assets/config.js"
-import { sendGetSearch } from "/src/api/api.js"
+import { sendGetSearch,sendWebBackSearchKeyWord } from "/src/api/api.js"
 import "./assets/css/search.css"
 
 let search_config = config["search"]
@@ -13,7 +13,8 @@ const [searchTipType,setSearchTipType] = createSignal(0)
 
 // 搜索发送
 function sendSearch(search_config_web,search_web,value){
-    sendGetSearch(search_config_web,search_web,value)
+    sendGetSearch(search_config_web,search_web,value) // 执行搜索
+    sendWebBackSearchKeyWord(search_config_web[search_web]["name"],value) // 向后端记录数据
     let recent_searches = recentSearches()
     if(recent_searches.includes(value)){
         let index = recent_searches.indexOf(value)
@@ -113,6 +114,7 @@ export function SearchBox(){
     return (
         <input 
             ref = {search} 
+            maxlegth = "255"
             type="text" 
             class = "search" 
             placeholder="此处输入关键字进行搜索" 

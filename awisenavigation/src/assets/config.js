@@ -6,28 +6,40 @@ export const config = {
                 "method":"get",
                 "url":"https://cn.bing.com/search",
                 "keys":["q"],
-                "icon":"/src/assets/img/icon/bing.png"
+                "icon":"/src/assets/img/icon/bing.png",
+                "getid":true                
             },
             {
                 "name": "baidu",
                 "method": "get",
                 "url": "https://www.baidu.com/baidu",
                 "keys": ["word"],
-                "icon": "/src/assets/img/icon/baidu.png"
+                "icon": "/src/assets/img/icon/baidu.png",
+                "getid":true
+            },
+            {
+                "name": "少年梦阅读",
+                "method": "get",
+                "url": "https://www.shaoniandream.com/library/str/0_0_0_0_0_0_0_1_",
+                "keys":[],
+                "icon": "/src/assets/img/icon/shaoniandream.png",
+                "getid":false
             },
             {
                 "name": "bilibili",
                 "method": "get",
                 "url": "https://search.bilibili.com/all",
                 "keys": ["keyword"],
-                "icon": "/src/assets/img/icon/bilibili.png"
+                "icon": "/src/assets/img/icon/bilibili.png",
+                "getid":true
             },
             {
                 "name": "google",
                 "method": "get",
                 "url": "https://www.google.com/search?",
                 "keys": ["q"],
-                "icon": "/src/assets/img/icon/google.png"
+                "icon": "/src/assets/img/icon/google.png",
+                "getid":true
             }
         ]
     },

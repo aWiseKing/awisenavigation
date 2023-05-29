@@ -14,19 +14,19 @@
 /* 动画代码 */
 @keyframes bg_ani {
   0% {
-    background: url(../img/bg/1.webp), url(../img/bg/1.jpg);
+    background: url(../img/bg/1.jpg), url(../img/bg/1.webp);
     background-size: cover;
   }
   33% {
-    background: url(../img/bg/2.webp), url(../img/bg/2.jpg);
+    background: url(../img/bg/2.jpg), url(../img/bg/2.webp);
     background-size: cover;
   }
   66% {
-    background: url(../img/bg/3.webp), url(../img/bg/3.jpg);
+    background: url(../img/bg/3.jpg), url(../img/bg/3.webp);
     background-size: cover;
   }
   100% {
-    background: url(../img/bg/4.webp), url(../img/bg/4.jpg);
+    background: url(../img/bg/4.jpg), url(../img/bg/4.webp);
     background-size: cover;
   }
 }/*# sourceMappingURL=background.css.map */

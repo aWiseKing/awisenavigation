@@ -7,7 +7,7 @@ function Background(){
 
     })
     return(
-        <div id = "bg" class="bg">
+        <div id = "bg" class="bg bg_webp bg_jpg">
         </div>
     )
 }
