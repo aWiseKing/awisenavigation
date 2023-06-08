@@ -3,6 +3,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from config import configs
 from sqlalchemy.orm import sessionmaker
 Base = declarative_base()
-engine = create_engine(configs["default"].SQLALCHEMY_DATABASE_URI)
+engine = create_engine(configs["default"].SQLALCHEMY_DATABASE_URI,pool_recycle=600)
 Session = sessionmaker(bind=engine)
 
