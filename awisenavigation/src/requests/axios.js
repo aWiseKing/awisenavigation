@@ -2,7 +2,7 @@ import axios from "axios";
 import { AWMsg } from "/src/assembly/awiseUI/awiseUI"
 
 const request = axios.create({
-    baseURL: "http://homeapi.fzass.com",
+    baseURL: "https://homeapi.fzass.com",
     timeout: 3000,
     withCredentials: true,
     headers: {
