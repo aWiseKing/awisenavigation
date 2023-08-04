@@ -1,5 +1,5 @@
 from RouterConfig import RouterConfig
-from module.enity.CreateTable import *
+from module.enity.TableAll import *
 
 
 if __name__ == "__main__":

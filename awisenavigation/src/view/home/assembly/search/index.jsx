@@ -67,7 +67,7 @@ export function SearchMode(){
                     <img src = {searchMode()["icon"]}/>
             </div>
             
-            <div style={`height:${searchModeMenu()==1?search_config_web.length*45:0}px;padding:${searchModeMenu()==1?"3px 3px 3px 3px":"0px 0px 0px 0px"}`} class="search_web_set_choice_box">
+            <div style={`width:auto;height:${searchModeMenu()==1?search_config_web.length*45:0}px;padding:${searchModeMenu()==1?"3px 3px 3px 3px":"0px 0px 0px 0px"}`} class="search_web_set_choice_box">
                 <For each={search_config_web} fallback={<div></div>}>
                     {(item,index)=>{
                             let search_choice_ico
@@ -83,12 +83,22 @@ export function SearchMode(){
                                 setSearchMode(search_config_web[store()["search_web"]])
                             }
                             
-                            return (<div class="search_choice_ico" name="baidu_search" id="baidu_search" ref = {search_choice_ico}
-                                onFocus={()=>setSearchModeA()} tabindex="0">
+                            return (
+                                <div class="search_choice" onFocus={()=>setSearchModeA()} tabindex="0">
                                     <Show when={searchModeMenu()==1}>
-                                        <img src = {item["icon"]}/>
-                                    </Show>
-                            </div>
+                                        <div 
+                                            class="search_choice_ico"
+                                            name="baidu_search"
+                                            id="baidu_search"
+                                            ref = {search_choice_ico}
+                                        >
+                                        
+                                            <img src = {item["icon"]}/>
+                                        
+                                        </div>
+                                        <div style={`margin-left:5px`}>{item["name"]}</div>
+                                   </Show>                                
+                                </div>
                             )
                         }
                     }

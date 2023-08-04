@@ -14,6 +14,24 @@ from sqlalchemy.exc import IntegrityError
 
 jwt_util = JwtUtil()
 PW_encryption_util = PWEncryptionUtil()
+""" 搜索框 """
+def search(app):
+    @app.route("/search", methods=["POST"])
+    def searchRecord():
+        xff = request.headers['X-Forwarded-For'] if "X-Forwarded-For" in request.headers.keys() else "null"
+        ip=request.remote_addr if request.remote_addr != "127.0.0.1" else xff
+        value = request.form.get("value")
+        search_engine = request.form.get("search_engine")
+        print(ip,value,search_engine)
+        session = Session()
+        search_term_storage = SearchTermStorage(ip=ip, search_word =value, search_engine=search_engine)
+        session.add(search_term_storage)
+        session.flush()
+        # 提交状态
+        session.commit()
+        session.close_all()
+        return "1"
+
 
 """ 用户认证 """
 def loginVerify(app):
